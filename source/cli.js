@@ -31,6 +31,7 @@ const cli = meow(`
 	  --no-yarn           Don't use Yarn
 	  --contents          Subdirectory to publish
 	  --no-release-draft  Skips opening a GitHub release draft
+	  --publish-timeout   Sets timeout for publish operation
 
 	Examples
 	  $ np
@@ -71,6 +72,9 @@ const cli = meow(`
 		},
 		preview: {
 			type: 'boolean'
+		},
+		publishTimeout: {
+			type: 'number'
 		}
 	}
 });

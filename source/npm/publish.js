@@ -23,6 +23,10 @@ const getPackagePublishArguments = options => {
 		args.push('--access', 'public');
 	}
 
+	if (options.publishTimeout) {
+		args.push('--timeout', options.publishTimeout);
+	}
+
 	return args;
 };
 
